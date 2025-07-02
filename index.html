@@ -83,7 +83,7 @@
     function carregarUsuarios() {
       const lista = document.getElementById("lista-usuarios");
 
-      const q = query(collection(db, "participantes"), orderBy("dataEntrada", "desc"));
+      const q = query(collection(db, "dia2"), orderBy("dataEntrada", "desc"));
 
       onSnapshot(q, snapshot => {
         lista.innerHTML = ""; // limpa antes de atualizar
